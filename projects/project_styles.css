@@ -1,0 +1,149 @@
+:root {
+	--bg-color: #0D1117;
+	--card-bg: #161B22;
+	--accent-color: #58A6FF;
+	--text-main: #C9D1D9;
+	--text-dim: #8B949E;
+	--border-color: #30363D;
+	--success: #238636;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-main);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+/* --- Navigation & Breadcrumbs --- */
+nav {
+	padding: 20px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.breadcrumb {
+	text-decoration: none;
+	color: var(--accent-color);
+	font-size: 0.9rem;
+	font-weight: 500;
+	transition: opacity: 0.2s;
+}
+
+.breadcrumb:hover {
+	opacity: 0.7;
+}
+
+
+header {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.meta-info {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-top: 10px;
+	font-size: 0.85rem;
+	color: var(--text-dim);
+}
+
+.tag {
+	background: rgba(88, 166, 255, 0.1);
+	color: var(--accent-color);
+	padding: 2px 8px;
+	border-radius: 12px;
+	border: 1px solid var(--accent-color);
+}
+
+h1 {
+	font-size: 2.2rem;
+	margin: 10px 0;
+	color: #FFF;
+}
+
+/* --- Project's Main Content --- */
+main {
+	max-width: 900px;
+	margin: 30px auto;
+	padding: 0 20px;
+}
+
+description {
+	font-size: 1.1rem;
+	margin-bottom: 40px;
+}
+
+/* --- The Console Embed --- */
+.console-container {
+	background: #000;
+	border-radius: 12px;
+	border: 1px solid var(--border-color);
+	overflow: hidden;
+	margin-bottom: 40px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.console-header {
+	background: #21262D;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+	width: 12px;
+	height: 12px; 
+	border-radius: 50%;
+}
+.red {
+	background-color: #FF5F56;
+}
+.yellow {
+	background-color: #FFBD2E;
+}
+.green {
+	background-color: #27C93F;
+}
+
+/* iframe sizing */
+iframe {
+	width: 100%;
+	height: 500px;
+	border: none;
+}
+
+.action-bar {
+	display: flex;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.btn {
+	padding: 12px 24px;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.btn-github {
+	background-color: var(--success);
+	color: white;
+}
+
+footer {
+	text-align: center;
+	padding: 40px;
+	color: var(--text-dim);
+	font-size: 0.8rem;
+}
