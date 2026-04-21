@@ -1,11 +1,17 @@
 :root {
 	--bg-color: #0D1117;
 	--card-bg: #161B22;
-	--accent-color: #58A6FF;
+	--accent-color: #58A6FF;		/* Neon Blue */
 	--accent-glow: rgba(88, 166, 255, 0.3);
 	--text-main: #C9D1D9;
 	--text-dim: #8B949E;
 	--border-color: #30363D;
+	/*
+	--gold: #D4AF37;
+	--dark-bg: #1A1A1A;
+	--card-bg: #2D2D2D;
+	--text: #E0E0E0;
+	*/
 }
 
 body {
@@ -14,6 +20,16 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 	margin: 0;
 	line-height: 1.6;
+	/*
+	background-color: var(--dark-bg);
+	color: var(--text);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	*/
 }
 
 /* --- Hero Section --- */
@@ -22,6 +38,12 @@ header {
 	text-align: center;
 	background: radial-gradient(circle at center, #1E252E 0%, #0D1117 100%);
 	border-bottom: 1px solid var(--border-color);
+	/*
+	text-align: center;
+	margin-bottom: 40px;
+	border-bottom: 2px solid var(--gold);
+	width: 80%;
+	*/
 }
 
 header h1 {
@@ -29,6 +51,10 @@ header h1 {
 	margin: 0;
 	color: #FFFFFF;
 	letter-spacing: -1px;
+	/*
+	color: var(--gold);
+	letter-spacing: 2px;
+	*/
 }
 
 header p {
@@ -37,7 +63,7 @@ header p {
 	margin: 10px auto 0;
 }
 
-/* --- Search/Filter Bar --- */
+/* --- Search/Filter Bar (Visual Only) --- */
 .filter-container {
 	display: flex;
 	justify-content: center;
@@ -62,6 +88,7 @@ header p {
 }
 
 /* --- Project Grid --- */
+
 .container {
 	max-width: 1100px;
 	margin: 40px auto;
@@ -72,9 +99,17 @@ header p {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 	gap: 24px;
+	/*
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
+	gap: 25px;
+	width: 90%;
+	max-width: 1200px;
+	*/
 }
 
 /* --- Individual Cards --- */
+
 .card {
 	background: var(--card-bg);
 	border: 1px solid var(--border-color);
@@ -85,12 +120,25 @@ header p {
 	transition: all 0.2s ease-in-out;
 	position: relative;
 	overflow: hidden;
+	/*
+	background: var(--card-bg);
+	border: 1px solid #444;
+	padding: 20px;
+	border-radius: 8px;
+	transition: transform 0.3s, border-color 0.3s;
+	display: flex;
+	flex-direction: column;
+	*/
 }
 
 .card:hover {
 	border-color: var(--accent-color);
 	box-shadow: 0 0 20px var(--accent-glow);
 	transform: translateY(-4px);
+	/*
+	transform: translateY(-5px);
+	border-color: var(--gold);
+	*/
 }
 
 .card-tag {
@@ -105,11 +153,16 @@ header p {
 .card h3 {
 	margin: 0 0 12px 0;
 	color: #F0F6FC;
+	/*
+	color: var(--gold);
+	margin-top: 0;
+	*/
 }
 
 .card p {
 	font-size: 0.95rem;
 	color: var(--text-dim);
+	/*flex-grow: 1;*/
 	margin-bottom: 24px;
 	
 	/* This creates the '...' after exactly 2 lines of text */
@@ -124,11 +177,18 @@ header p {
 }
 
 /* --- Action Buttons --- */
+
 .card-footer {
 	display: flex;
 	gap: 12px;
 }
-
+/*
+.btn-group {
+	margin-top: auto;
+	display: flex;
+	gap: 10px;
+}
+*/
 .btn {
 	flex: 1;
 	text-align: center;
@@ -138,10 +198,19 @@ header p {
 	font-size: 0.85rem;
 	font-weight: 600;
 	transition: opacity: 0.2s;
+	/*
+	padding: 8px 15px;
+	text-decoration: none;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	flex: 1;
+	text-align: center;
+	*/
 }
 
 .btn-primary {
-	background-color: #238636;
+	background-color: #238636;		/* GitHub Green */
 	color: white;
 }
 
@@ -150,7 +219,17 @@ header p {
 	border: 1px solid var(--border-color);
 	color: var(--text-main);
 }
+/*
+.btn-run {
+	background: var(--gold);
+	color: black;
+}
 
+.btn-code {
+	border: 1px solid var(--gold);
+	color: var(--gold);
+}
+*/
 .btn:hover {
 	opacity: 0.8;
 }
