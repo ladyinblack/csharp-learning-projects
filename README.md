@@ -24,6 +24,8 @@ The centerpiece of this archive is the **Alchemist's Axiom**, a multi-phase logi
 | **Money Maker**            | Math & Modulo           | An algorithmic currency converter for efficient treasure division. | 
 | **Mad Libs**               | Strings & Interpolation | A neural archive recovery system for randomized storytelling. | 
 | **Space Expedition**       | Logic & Conditionals    | High-stakes navigation involving atmospheric and bunker management. | 
+** More projects to be added as I work on them.
+
 
 ## 🚀 Technical Proficiencies
 
