@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The Developer Quiz Zone</title>
+		<link rel="stylesheet" href="quizstyles.css" />
+	</head>
+	<body>
+		<div id="app"></div>
+		<script>
+			const params = new URLSearchParams(window.location.search);
+			
+			const quizName = params.get("quiz");
+			
+			const topic = params.get("topic");
+			window.quizTopic = topic;
+			
+			const script = document.createElement("script");
+			script.src = `data/${quizName}.js`;
+			
+			script.onload = () => {
+				const engine = document.createElement("script");
+				engine.src = "quiz.js";
+				
+				document.body.appendChild(engine);
+			};
+			
+			document.body.appendChild(script);
+		</script>
+	</body>
+</html>
