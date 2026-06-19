@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>C# DSA / Game Developer Blog</title>
+		<link rel="stylesheet" href="tutblogs-styles.css" />
+		<link rel="stylesheet" href="csharp/stack_visualizer_cs.css" />
+	<body>
+		<nav>
+			<a href="../index.html" class="breadcrumb">&larr; Back to Hub</a>
+		</nav>
+		
+		<article class="blog-content">
+			<h1>Stack - Collection Deep Dive</h1>
+			<p><em>Published on: 2026-06-17 | Tags: #CS #Stack</em></p>
+			
+			<section>
+				<h2>The Real-World "Why" in .NET Architectures</h2>
+				</p>In C# development ecosystem, <code>System.Collections.Generic.Stack&lt;T&gt;</code> is heavily used under the hood across various frameworks (.NET Core, ASP.NET, WPF, and Unity).</p>
+				<ul>
+					<li><strong>WPF/MAUI UI Navigation:</strong> Desktop applications use a Navigation Stack.  When you drill down into settings panels, your previous UI Views are cached on an architectural stack framework.  Popping an element pops you back to the dashboard view.</li>
+					<li><strong>Roslyn Compiler Diagnostics:</strong> The C# compiler (Roslyn) uses stacks to build Abstract Syntax Trees (AST).  When evaluating block scopes (<code>{ ... }</code>), variables are pushed to local scope tables on a stack and popped out when execution exits the closing brace.</li>
+					<li><strong>Deep Pathfinding Algorithms (AI):</strong> If you are writing game AI in Unity, pathfinding systems like Depth-First Search (DFS) use an explicit stack to remember paths to backtrack through when hitting dead ends.</li>
+				</ul>
+				<h3>C# Time & Space Complexities:</h3>
+				<ul>
+					<li><code>Push(T item)</code>: <em>O(1)</em> amortized time.  (If the array inside the generic stack grows past capacity, it automatically copies over to a larger array, which is an <em>O(n)</em> operation, but happens rarely).</li>
+					<li><code>Pop()</code>: <em>O(1)</em> constant time.</li>
+					<li><code>Peek()</code>: <em>O(1)</em> constant time.</li>
+					<li><code>Count</code>: <em>O(1)</em> tracked property.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Real-World C# Project Tutorial - The Text Editor Undo Engine</h2>
+				<p>Let's build a real-world system using modern, idiomatic C#.  We will create an <code>EditorHistoryengine</code> using two <code>Stack&lt;T&gt;</code> instances.</p>
+				<p>Create a console application project in your local development environment (<code>dotnet new console</code>) and <strong>type this out line-by-line</strong> to build up your code muscle memory.</p>
+				
+				<div class="console-container">
+					<div class="console-header">
+						<div class="dot red"></div>
+						<div class="dot yellow"></div>
+						<div class="dot green"></div>
+						<span style="font-size: 0.8rem; margin-left: 10px; color: var(--text-dim);">Live Terminal Execution</span>
+					</div>
+					<iframe src="https://dotnetfiddle.net/Widget/ovDx48" frameborder="0"></iframe>
+				</div>
+			</section>
+			
+			<section>
+				<h2>C# <span class="code-type">Stack&lt;T&gt;</span> Visualizer</h2>
+				<p>Simulating .NET runtime collection behavior</p>
+				
+				<div class="vis-container">
+					<div class="controls">
+						<div class="input-group">
+							<input type="text" id="element-input" placeholder='e.g., "State1"' maxlength="12" />
+							<button class="btn-push" onclick="pushToStack()">Push()</button>
+						</div>
+						<button class="btn-pop" onclick="popFromStack()">Pop()</button>
+						<button class="btn-peek" onclick="peekStack()">Peek()</button>
+						<div class="status-box" id="status-log">// Output Console<br />Stack&lt;string&gt; libraryStack = new Stack&lt;string&gt;();</div>
+					</div>
+					<div class="canvas" id="stack-canvas"></div>
+				</div>
+			</section>
+			
+			<section class="tutorial-box">
+				<h3>Test Your Knowledge</h3>
+				<ol>
+					<li><p>Review your knowledge on the Stack Collection, enter the <a href="quiz.html?quiz=csharp&topic=stacks">Quiz zone</a>.</p></li>
+					<li><p>Practice makes Perfect! Try out some of these <a href="csharp/stacks_exercises.html">Scenario-based Exercises</a> on your own.</p></li>
+				</ol>
+			</section>
+			
+		</article>
+
+		<div class="container">
+			<div class="blog-grid">
+		
+				<div class="card">
+					<span class="card-tag">#Stack #JS</span>
+					<h3>Stacks (JavaScript)</h3>
+					<p>Read about implementing stacks in JavaScript.</p>
+					<div class="card-footer">
+						<a href="javascript/stack-javascript.html" class="btn btn-primary">Read more...</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<p>
+				&copy; Created and Designed by <span style="color:#58A6FF">Ronica Singh</span>
+				<span><a href="https://www.linkedin.com/in/ronica-singh-7707aa38"><i class="fa-brands fa-square-linkedin"></i></a></span>
+			</p>
+		</footer>
+		
+		<script src="csharp/stackvis_cs.js"></script>
+	</body>
+</html>
