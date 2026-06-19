@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript DSA / Game Developer Blog</title>
+		<link rel="stylesheet" href="../tutblogs-styles.css" />
+		<link rel="stylesheet" href="stack_visualizer.css" />
+	<body>
+		<nav>
+			<a href="../index.html" class="breadcrumb">&larr; Back to Tutorial Blogs</a>
+		</nav>
+		
+		<article class="blog-content">
+			<h1>Stack (JavaScript) - Collection Deep Dive</h1>
+			<p><em>Published on: 2026-06-12 | Tags: #JS #Stack</em></p>
+			
+			<section>
+				<h2>The Real-World "Why"</h2>
+				</p>In real production environments, memory allocation and software behaviors rely aggressively on stacks.</p>
+				<ul>
+					<li><strong>The Browser History (Undo/Redo & Navigation):</strong> When you click links, your browser pushes URLs onto a history stack.  Clicking the "Back" button <em>pops</em> the current URL off, exposing the previous one.</li>
+					<li><strong>The Call Stack (Execution Context):</strong> Every programming language uses a stack to manage function execution.  If function <code>A()</code> calls <code>B()</code>, and <code>B()</code> calls <code>C()</code>, the runtime system pushes <code>A</code>, then <code>B</code>, then <code>C</code> onto the call stack.  When <code>C</code> finishes running, it is popped off so execution can return safely to <code>B</code>.</li>
+					<li><strong>Delimiter Matching:</strong> Compilers parse your code brackets <code>{[()]}</code> using a stack to ensure they close in the correct nested order.</li>
+				</ul>
+				<h3>Computation Tradeoffs:</h3>
+				<ul>
+					<li><code>Push (Insertion)</code>: <em>O(1)</em> constant time.</li>
+					<li><code>Pop (Removal)</code>: <em>O(1)</em> constant time.</li>
+					<li><code>Peek (Looking at the top item)</code>: <em>O(1)</em> constant time.</li>
+					<li><code>Search</code>: <em>O(n)</em> linear time (you have to completely dismantle the stack to find an item at the bottom.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Real-World JavaScript Project Tutorial - The Undo/Redo Engine</h2>
+				<p>Let's build a mini-feature you see inside tools like Microsoft Word or Photoshop: a text editor state manager that tracks history so a user can safely "Undo" and "Redo" actions.</p>
+				<p>Type this implementation out line-by-line in your programming environment to internalize how two complementary stacks can work together.</p>
+				
+				<div class="console-container">
+					<div class="console-header">
+						<div class="dot red"></div>
+						<div class="dot yellow"></div>
+						<div class="dot green"></div>
+						<span style="font-size: 0.8rem; margin-left: 10px; color: var(--text-dim);">Live Terminal Execution</span>
+					</div>
+					<iframe src="https://onecompiler.com/javascript/44sn8mg6w" frameborder="0"></iframe>
+				</div>
+			</section>
+			
+			<section>
+				<h2>Stack Visualizer</h2>
+				<p>LIFO: Last-In, First-Out Demonstration</p>
+				
+				<div class="vis-container">
+					<div class="controls">
+						<div class="input-group">
+							<input type="text" id="element-input" placeholder="Enter value (e.g., A, B, 42)" maxLength="10" />
+							<button class="btn-push" onclick="pushToStack()">Push</button>
+						</div>
+						<button class="btn-pop" onclick="popFromStack()">Pop</button>
+						<div class="status-box" id="status-log">Status: Stack is empty. Ready for operations</div>
+					</div>
+					<div class="canvas" id="stack-canvas"></div>		
+				</div>
+			</section>
+			
+			<section class="tutorial-box">
+				<h3>Test Your Knowledge</h3>
+				<ol>
+					<li><p>Review your knowledge on the Stack Collection, enter the <a href="../quiz.html?quiz=javascript&topic=stacks">Quiz zone</a>.</p></li>
+					<li><p>Practice makes Perfect! Try out some of these <a href="stacks_exercises.html">Scenario-based Exercises</a> on your own.</p></li>
+				</ol>
+			</section>
+		</article>
+		
+		<footer>
+			<p>
+				&copy; Created and Designed by <span style="color:#58A6FF">Ronica Singh</span>
+				<span><a href="https://www.linkedin.com/in/ronica-singh-7707aa38"><i class="fa-brands fa-square-linkedin"></i></a></span>
+			</p>
+		</footer>
+		
+		<script src="stackvis.js"></script>
+	</body>
+</html>
