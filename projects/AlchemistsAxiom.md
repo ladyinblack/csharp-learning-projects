@@ -57,8 +57,8 @@ The user must pick the index (0-4) that corresponds to the correct solution.
 | **Ingredient List** | `string[]` to store and display choices | 
 
 ## 4. The Narrative Flow
-a. **Boot Up:** "Hello, Apprentice [Name].  The Aether Core is at [Year] cycles of instability."
-b. **Security:** "Inject Resonance Key to begin stabilization..." 
-c. **Evaluation:** "Key Strength: [Rating].  Shielding is [Status]."
-d. **The Crisis:** "The Pressure Valve is stuck!  Do you: [A] Smash it with a wrench or [B] Calibrate the gears?"
-e. **The Conclusion:** Depending on the key strength from Phase 1 and the choice in Phase 4, the city is either saved, frozen in time, or turned to gold. 
+1. **Boot Up:** "Hello, Apprentice [Name].  The Aether Core is at [Year] cycles of instability."
+2. **Security:** "Inject Resonance Key to begin stabilization..." 
+3. **Evaluation:** "Key Strength: [Rating].  Shielding is [Status]."
+4. **The Crisis:** "The Pressure Valve is stuck!  Do you: [A] Smash it with a wrench or [B] Calibrate the gears?"
+5. **The Conclusion:** Depending on the key strength from Phase 1 and the choice in Phase 4, the city is either saved, frozen in time, or turned to gold. 
