@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Python Basics Study Guide - CybroSoft Portal</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<nav>
+			<a href="index.html" class="breadcrumb">&larr; Back to Projects</a>
+		</nav>
+		
+		<header>
+			<!-- Lesson Info -->
+			<h2 id="lessonTitle"></h2>
+			<p id="lessonDescription"></p>
+		</header>
+	
+		<main>
+			<div class="container">
+				<div class="main-layout">
+				
+					<!-- LEFT: Lesson --> 
+					<div class="lesson-panel">
+						<!-- Progress --> 
+						<p><strong>Exercise:</strong> <span id="progress"></span></p>
+						
+						<!-- Challenge -->
+						<h3 id="title"></h3>
+						<p id="description"></p>
+						<p id="hint" class="hint hidden"></p>
+					</div>
+					
+					<!-- RIGHT: Code -->
+					<div class="code-panel">
+						<textarea id="code"></textarea>
+						
+						<div class="buttons">
+							<button class="primary" onclick="runCode()">▶️ Run Code</button>
+							<button class="primary" onclick="runCheck()">✅ Check</button>
+							<button id="nextBtn" class="secondary" onclick="nextChallenge()">Next</button>
+							<button class="secondary" onclick="resetCode()">Reset</button>
+							<button class="outline" onclick="toggleHint()">Hint</button>
+						</div>
+					
+						<!-- Output Console -->
+						<div id="output" class="output"></div>
+						
+						<!-- Key Concepts -->
+						<div id="keyconcept" class="card" style="display:none">
+							<h3>💡 Key Concepts</h3>
+							<ul id="keyconcepts"></ul>
+							<p>Try this on <a id="externallink"></a></p>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div>
+				&copy; Created and Designed by <a href="https://www.linkedin.com/in/ronica-singh-7707aa38"><span style="color:#58A6FF">Ronica Singh</span></a>
+				<br />for <span style="color:#69B7FF">Learn WebAnim</span>
+			</div>
+		</footer>
+		
+		<script src="data/lessons.js"></script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v314.0.0/full/pyodide.js"></script>
+		<script src="runlesson.js"></script>
+	</body>
+</html>
