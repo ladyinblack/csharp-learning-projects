@@ -1315,6 +1315,465 @@ if None:
 		`,
 		externallink: "https://onecompiler.com/python/44teaughs"
 	},
+	/** ADDITIONAL EXERCISES / NEXT LEVEL */
+	{
+		title: "Temperature Indicator",
+		difficultylevel: "🟢",
+		difficulty: "easy",
+		points: 10,
+		complete: false,
+		description: `
+			<p>Return a value that describes whether a temperature is cold, normal, or hot.</p>
+			<p><strong>Goal:</strong> Use <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
+		`,
+		hint: "Return -1, 0, or 1 based on the temperature.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+-1
+"""
+
+def temperature_sign(temp):
+	"""Return -1 if cold (<0), 0 if normal (0), 1 if hot (>0)"""
+	# TODO
+	if temp < 0:
+		return None
+	elif temp > 0:
+		return None
+	else:
+		return None
+		
+print(temperature_sign(-5))`,
+		check: (code) => 
+			code.includes("if") && 
+			code.includes("elif") && 
+			code.includes("else"),
+		keyconcepts: `
+			<li><code>if</code> / <code>elif</code> / <code>elif</code></li>
+			<li>Comparison operators</li>
+			<li>Returning values</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xdxp6n9"
+	},
+	{
+		title: "Bank Balance Status",
+		difficultylevel: "🟢",
+		difficulty: "easy",
+		points: 10,
+		complete: false,
+		description: `
+			<p>Sometimes whether an account is in debt, empty, or positive.</p>
+			<p><strong>Goal:</strong> Use conditional branching.</p>
+		`,
+		hint: "Return -1, 0, or 1.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+1
+"""
+
+def balance_status(amount):
+	"""Return -1 if debt, 0 if zero, 1 if positive balance"""
+	# TODO: implement logic 
+	return None
+	
+print(balance_status(100))`,
+		check: (code) =>
+			code.includes(ïf"),
+		keyconcepts: `
+			<li>Conditional branching</li>
+			<li>Number comparison</li>
+			<li>Function logic</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xdxyfwn"
+	},
+	{
+		title: "Apple Counter",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Fix the grammar so singular and plural forms are displayed correctly.</p>
+			<p><strong>Goal:</strong> Use an equality check.</p>
+		`,
+		hint: "Use a special message when apples equals 1.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+Splitting 1 apple
+Splitting 5 apples
+"""
+
+def split_apples(apples):
+	# TODO: fix grammar
+	if apples == 1:
+		print(None)
+	else:
+		print("Splitting", apples, "apples")
+		
+split_apples(1)
+split_apples(5)`,
+		check: (code) => 
+			code.includes("apples == 1"),
+		keyconcepts: `
+			<li><code>==</code> equality check</li>
+			<li>Singular versus plural logic</li>
+			<li>Conditional formatting</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xdycsnt"
+	},
+	{
+		title: "Message Notifications",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Display the correct singular or plural message count.</p>
+			<p><strong>Goal:</strong> Adjust output using conditionals.</p>
+		`,
+		hint: "Handle the case when n equals 1 separately.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+1 message
+3 messages
+"""
+
+def show_messages(n):
+	# TODO: fix singular/plural
+	if n == 1:
+		print(None)
+	else:
+		print(n, "messages")
+		
+show_messages(1)
+show_messages(3)`,
+		check: (code) =>
+			code.includes("n == 1"),
+		keyconcepts: `
+			<li>Conditional printing</li>
+			<li>User-friendly output</li>
+			<li>Formatting logic</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xdyn6jx"
+	},
+	{
+		title: "All Features Enabled",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Check whether every feature is enabled.</p>
+			<p><strong>Goal:</strong> Use chained <code>and</code> conditions.</p>
+		`,
+		hint: "All values must be True.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def all_features(dark_mode, notifications, auto_save):
+	# TODO: return True only if all are True
+	return None
+	
+print(all_features(True, True, True))`,
+		check: (code) => 
+			code.includes("and"),
+		keyconcepts: `
+			<li><code>and</code> chaining</li>
+			<li>Multiple conditions</li>
+			<li>Logical requirements</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe2yyj7"
+	},
+	{
+		title: "No Features Enabled",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Check whether all feature flags are disabled.</p>
+			<p><strong>Goal:</strong> Use logical negation.</p>
+		`,
+		hint: "Use the not operator.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def no_features(a, b, c):
+	# TODO: return True if all are False
+	return None
+	
+print(no_features(False, False, False))`,
+		check: (code) => 
+			code.includes("not"),
+		keyconcepts: `
+			<li><code>not</code> operator</li>
+			<li>Boolean grouping</li>
+			<li>Logical negation</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe37typ"
+	},
+	{
+		title: "Concise Positive Check",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>Simplify a boolean function into a single return statement.</p>
+			<p><strong>Goal:</strong> Return a boolean expression directly.</p>
+		`,
+		hint: "Return the comparison itself.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def is_positive(x):
+	if x > 0:
+		return True
+	else:
+		return False
+		
+def concise_is_positive(x):
+	# TODO: one line solution
+	return None
+	
+print(concise_is_positive(5))`,
+		check: (code) => 
+			code.includes("x > 0"),
+		keyconcepts: `
+			<li>Simplifying functions</li>
+			<li>Direct boolean returns</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe2c9wm"
+	},
+	{
+		title: "Concise Even Number Check",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>Rewrite the function using a single boolean expression.</p>
+			<p><strong>Goal:</strong> Remove unnecessary conditionals.</p>
+		`,
+		hint: "Use the modulus operator.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def is_even(n):
+	if n % 2 == 0:
+		return True
+	else:
+		return False
+		
+def concise_is_even(n):
+	# TODO: one line
+	return None
+	
+print(concise_is_even(4))`,
+		check: (code) => 
+			code.includes("% 2 == 0"),
+		keyconcepts: `
+			<li>Boolean expressions</li>
+			<li>Return simplification</li>
+			<li>Arithmetic and logic</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe2qepr"
+	},
+	{
+		title: "At Least One True",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>Return True if at least one value is True.</p>
+			<p><strong>Goal:</strong> Use logical OR.</p>
+		`,
+		hint: "Use the or operator.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def at_least_one(a, b, c):
+	# TODO
+	return None
+	
+print(at_least_one(False, True, False))`,
+		check: (code) => 
+			code.includes("or"),
+		keyconcepts: `
+			<li><code>or</code> logic</li>
+			<li>Logical grouping</li>
+			<li>Condition shortcuts</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe49vmw"
+	},
+	{
+		title: "Travel Decision Logic Bug",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Investigate a boolean logic bug caused by operator precedence.</p>
+			<p><strong>Goal:</strong> Find a failing test case.</p>
+		`,
+		hint: "Try different combinations of True and False.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+(True or False depending on fix)
+"""
+
+def can_travel(has_ticket, has_passport, is_weeked):
+	return has_ticket or has_passport and not is_weekend
+	
+# TODO: find inputs that break logic
+has_ticket = False
+has_passport = False
+is_weekend = False
+
+print(can_travel(has_ticket, has_passport, is_weekend))`,
+		check: (code) =>
+			code.includes("True") || code.includes("False"),
+		keyconcepts: `
+			<li>Operator precedence</li>
+			<li>Logic bugs</li>
+			<li>Debugging conditions</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xdyybh3"
+	},
+	{
+		title: "Gym Access Logic",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Test a boolean expression and identify a failing scenario.</p>
+			<p><strong>Goal:</strong> Understand and/or precedence.</p>
+		`,
+		hint: "Experiment with edge cases.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+(True or False depending on test case)
+"""
+
+def can_enter(member, has_guest_pass, weekend):
+	return member or has_guest_pass and weekend
+	
+# TODO: find failing test case
+member = False
+has_guest_pass = False
+weekend = False
+
+print(can_enter(member, has_guest_pass, weekend))`,
+		check: (code) => 
+			code.includes("True") || code.includes("False"),
+		keyconcepts: `
+			<li><code>and</code> versus <code>or</code> precedence</li>
+			<li>Testing edge cases</li>
+			<li>Reasoning about logic</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe23y5y"
+	},
+	{
+		title: "Single Feature Toggle",
+		difficultylevel: "🔴",
+		difficulty: "Hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Return True only when one value is True.</p>
+			<p><strong>Goal:</strong> Implement exclusive-logic behavior.</p>
+		`,
+		hint: "Count how many values are True.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def exactly_one_feature(a, b, c):
+	# TODO: only one True
+	return None
+	
+print(exactly_one_feature(True, False, False))`,
+		check: (code) => 
+			code.includes("== 1"),
+		keyconcepts: `
+			<li>Exclusive OR logic</li>
+			<li>Combining conditionals</li>
+			<li>Edge case thinking</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe3j2m6"
+	},
+	{
+		title: "Exactly One Winner",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Determine whether exactly one competitor won.</p>
+			<p><strong>Goal:</strong> Use boolean counting.</p>
+		`,
+		hint: "True values can be treated as 1.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def exactly_one_winner(a, b, c):
+	# TODO: use arithmetic trick or logic
+	return None
+	
+print(exactly_one_winner(True, False, False))`,
+		check: (code) => 
+			code.includes("== 1"),
+		keyconcepts: `
+			<li>Boolean to integer conversions</li>
+			<li>Summing conditions</li>
+			<li>Shorthand logic</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe3t266"
+	},
+	{
+		title: "Exactly Two Conditions",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Return True only when exactly two values are True.</p>
+			<p><strong>Goal:</strong> Count boolean values.</p>
+		`,
+		hint: "Count the True values and compare the total.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def exactly_two(a, b, c):
+	# TODO: exactly 2 True
+	return None
+	
+print(exactly_two(True, True, False))`,
+		check: (code) => 
+			code.includes("== 2"),
+		keyconcepts: `
+			<li>Boolean math</li>
+			<li>Counting True values</li>
+			<li>Advanced conditions</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe433pc"
+	},
 	]
 },
 {
@@ -1622,7 +2081,372 @@ print(None)`,
 			<li>Safer than <code>index()</code> for searching</li>
 		`,
 		externallink: "https://onecompiler.com/python/44xbperkz"
-	}
+	},
+	/** ADDITIONAL EXERCISES / NEXT LEVEL */
+	{
+		title: "Select Third Item",
+		difficultylevel: "🟢",
+		difficulty: "easy",
+		points: 10,
+		complete: false,
+		description: `
+			<p>Return the third item in a list.</p>
+			<p><strong>Goal:</strong> Access an item safely using indexes.</p>
+		`,
+		hint: "The third item is at index 2.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+3
+"""
+
+def select_third(L):
+	"""Return the third element, or None if it doesn't exist."""
+	if len(L) < 3:
+		return None
+	return None
+	
+print(select_third([1, 2, 3, 4]))`,
+		check: (code) =>
+			code.includes("[2]"),
+		keyconcepts: `
+			<li>Lists are zero-based indexing, so the third item is at <code>[2]</code></li>
+			<li><code>len</code> lets you check whether enough items exist before accessing them</li>
+			<li>Safe list access prevents IndexError crashes</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe5dn3b"
+	},
+	{
+		title: "Select First Safely",
+		difficultylevel: "🟢",
+		difficulty: "easy",
+		points: 10,
+		complete: false,
+		description: `
+			<p>Return the first item in a list, or None if the list is empty.</p>
+			<p><strong>Goal:</strong> Handle empty lists safely.</p>
+		`,
+		hint: "The first item is at index 0.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+10
+"""
+
+def select_first(L):
+	"""Return first element or None if list empty."""
+	if len(L) == 0:
+		return None
+	return None
+	
+print(select_first([10, 20, 30]))`,
+		check: (code) => 
+			code.includes("[0]"),
+		keyconcepts: `
+			<li>The first item of any list is stored in <code>[0]</code></li>
+			<li><code>len()</code> lets you check whether anything exists in a list</li>
+			<li>Empty lists have a length of 0 and cannot be indexed directly</li>
+			<li>Defensive programming helps make functions more reliable</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe626yn"
+	},
+	{
+		title: "Best Team Captain",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Return the captain from the first team in a nested list.</p>
+			<p><strong>Goal:</strong> Practice nested indexing.</p>
+		`,
+		hint: "Access the first team, then the captain inside it.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+Alice
+"""
+
+teams = [
+	["Coach1", "Alice"],
+	["Coach2", "Bob"]
+]
+
+def winning_team_captain(teams):
+	"""Return captain of first (best) team"""
+	return None
+	
+print(winning_team_captain(teams))`,
+		check: (code) =>
+			code.includes("[0][1]"),
+		keyconcepts: `
+			<li>Nested lists are lists that contain other lists as elements</li>
+			<li>You can chain indexes such as <code>[0][1]</code> to access data inside inner lists</li>
+			<li>The first index selects the team, while the second selects a person within that team</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe7dre6"
+	},
+	{
+		title: "Last Player of Worst Team",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Return the last player from the last team.</p>
+			<p><strong>Goal:</strong> Combine nested indexing with negative indexes.</p>
+		`,
+		hint: "Use negative indexes to work from the end.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+Charlie
+"""
+
+teams = [
+	["Coach1", "Alice", "Bob"],
+	["Coach2", "Tom", "Charlie"]
+]
+
+def last_player(teams):
+	"""Return last player from last team"""
+	return None
+	
+print(last_player(teams))`,
+		check: (code) => 
+			code.includes("[-1][-1]"),
+		keyconcepts: `
+			<li>Negative indexes count backwards from the end of a list</li>
+			<li><code>[-1]</code> accesses the final item in a list</li>
+			<li>Nested indexing can be combined to access deeply stored data</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe7pj2x"
+	},
+	{
+		title: "Swap First Two Items",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Swap the first two items in a list.</p>
+			<p><strong>Goal:</strong> Modify a list in place.</p>
+		`,
+		hint: "Use a temporary variable to store one value.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+['B', 'A', 'C']
+"""
+
+def swap_first_two(L):
+	"""Swap first two elements"""
+	temp = L[0]
+	# TODO: complete swap
+	
+L = ['A', 'B', 'C']
+swap_first_two(L)
+print(L)`,
+		check: (code) => 
+			code.includes("L[0]") && 
+			code.includes("L[1]"),
+		keyconcepts: `
+			<li>Values can be swapped by temporarily storing one of them</li>
+			<li>Lists are mutable, meaning their contents can be changed directly</li>
+			<li>Assigning to an index updates the existing list</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe7ykfw"
+	},
+	{
+		title: "Swap Middle Elements",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Swap the items at index 1 and 2.</p>
+			<p><strong>Goal:</strong> Practice index assignment.</p>
+		`,
+		hint: "Store one value before replacing it.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+['A', 'C', 'B', 'D']
+"""
+
+def swap_middle(L):
+	"""Swap index 1 and 2"""
+	# TODO
+	
+L = ['A', 'B', 'C', 'D']
+swap_middle(L)
+print(L)`,
+		check: (code) => 
+			code.includes("L[1]") && 
+			code.includes("L[2]"),
+		keyconcepts: `
+			<li>Each item in a list can be modified through its index position</li>
+			<li>Mutability allows changes without creating a new list</li>
+			<li>Carefully tracking positions helps avoid overwriting values accidentally</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe8pac4"
+	},
+	{
+		title: "List Length Predictions",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>Predict the lengths of several lists.</p>
+			<p><strong>Goal:</strong> Understand how nesting and slicing affect length.</p>
+		`,
+		hint: "Count top-level items only.",
+		starterCode: `a = [1, 2]
+b = [[1, 2], 3]
+c = ['a', 'b', 'c', 'd']
+d = [5, 6, 7][2:]
+
+# TODO: fill lengths
+lengths = [None, None, None, None]
+
+print(lengths)`,
+		check: (code) => 
+			code.includes("2") && 
+			code.includes("4"),
+		keyconcepts: `
+			<li>Nested lists count as a single element when using <code>len()</code></li>
+			<li>Slices create new lists whose lengths may differ from the original</li>
+			<li>Predicting results before running code builds stronger reasoning skills</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe8zpy3"
+	},
+	{
+		title: "More List Length Predictions",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>Determine the lengths of lists containing nested data and slices.</p>
+			<p><strong>Goal:</strong> Strengthen understanding of list structure.</p>
+		`,
+		hint: "Focus on visible elements, not values inside nested lists.",
+		starterCode: `a = []
+b = [[], []]
+c = [1, [2, 3], 4]
+d = [1, 2, 3, 4][:-1]
+
+# TODO
+lengths = [None, None, None, None]
+
+print(lengths)`,
+		check: (code) => 
+			code.includes("0"),
+		keyconcepts: `
+			<li>An empty list has a length of 0</li>
+			<li>Lists inside lists still count as a single top-level item</li>
+			<li>Slicing with negative indexes can exclude items from the end</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe9dvux"
+	},
+	{
+		title: "Early Arrival Check",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Determine whether a guest arrived during the first half of arrivals.</p>
+			<p><strong>Goal:</strong> Compare positions within a list.</p>
+		`,
+		hint: "Compare the guest's position to half the list length.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def early_guest(arrivals, name):
+	"""Return True if guest arrived in first half"""
+	order = arrivals.index(name)
+	# TODO
+	return None
+	
+guests = ["A", "B", "C", "D", "E"]
+
+print(early_guest(guests, "B"))`,
+		check: (code) => 
+			code.includes(".index") && 
+			code.includes("len"),
+		keyconcepts: `
+			<li><code>.index()</code> finds the position of a value within a list</li>
+			<li><code>len()</code> can be used to calculate where the halfway point occurs</li>
+			<li>Comparing positions is a common pattern in list-based algorithms</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe9qaue"
+	},
+	{
+		title: "Last Arrival Check",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Check whether a guest was the final person to arrive.</p>
+			<p><strong>Goal:</strong> Compare an index to the end of a list.</p>
+		`,
+		hint: "The last index is len(list) - 1.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def is_last(arrivals, name):
+	"""Return True if guest is last"""
+	# TODO
+	return None
+	
+guests = ["A", "B", "C", "D"]
+
+print(is_last(guests, "D"))`,
+		check: (code) => 
+			code.includes(".index") && 
+			code.includes("len"),
+		keyconcepts: `
+			<li>List indexes start at 0, so the final position is <code>len(list) - 1</code></li>
+			<li>Comparing indexes helps identify specific locations in a sequence</li>
+			<li>Boundary conditions are important when working with the first or last element</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xe9zdgw"
+	},
+	{
+		title: "Middle Guest",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Determine whether a guest occupies the middle position.</p>
+			<p><strong>Goal:</strong> Calculate and compare the midpoint.</p>
+		`,
+		hint: "Use integer division to find the center index.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def is_middle(arrivals, name):
+	"""Return True if guest is in middle position"""
+	order = arrivals.index(name)
+	# TODO
+	return None
+	
+guests = ["A", "B", "C"]
+
+print(is_middle(guests, "B"))`,
+		check: (code) => 
+			code.includes("//"),
+		keyconcepts: `
+			<li>Integer division (<code>//</code>) is useful when calculating list positions</li>
+			<li>The middle index can be found from the list length</li>
+			<li>Reasoning about positions develops problem-solving skills for algorithms</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xeab8uv"
+	},
 	]
 },
 {
@@ -1630,6 +2454,631 @@ print(None)`,
 	title: "Loops and List Comprehensions",
 	description: "For and while loops, and a much-loved Python feature: list comprehensions",
 	exercises: [
+	{
+		title: "For Loop (Print Items)",
+		difficultylevel: "🟢",
+		difficulty: "easy",
+		points: 10,
+		complete: false,
+		description: `
+			<p>You are displaying items in a store inventory.</p>
+			<p><strong>Goal:</strong> Loop through a list and print each item.</p>
+		`,
+		hint: "Use: for item in list",
+		starterCode: `"""
+EXPECTED OUTPUT:
+Apple 
+Banana
+Orange
+"""
+
+fruits = ["Apple", "Banana", "Orange"]
+
+# TODO: loop ad print each fruit
+None`,
+		check: (code) => 
+			code.includes("for") && code.includes("in"),
+		keyconcepts: `
+			<li>Use <code>for</code> loops to iterate over lists</li>
+			<li><code> for item in list</code> is standard pattern</li>
+			<li>Loops run once per element</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xeav894"
+	},
+	{
+		title: "Loop Accumulator (Multiply Values)",
+		difficultylevel: "🟢🟡",
+		difficulty: "easy-medium",
+		points: 15,
+		complete: false,
+		description: `
+			<p>You are calculating the product of numbers.</p>
+			<p><strong>Goal:</strong> Multiply all values using a loop.</p>
+		`,
+		hint: "Start with 1",
+		starterCode: `"""
+EXPECTED OUTPUT:
+24
+"""
+
+numbers = [2, 3, 4]
+
+product = None
+
+# TODO: loop and multiply values
+
+print(product)`,
+		check: (code) => 
+			code.includes("for") && code.includes("*"),
+		keyconcepts: `
+			<li>Use accumulator variables</li>
+			<li>Start multiplication at 1</li>
+			<li>Update value inside loop</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xeb7d7w"
+	},
+	{
+		title: "Loop + Condition (Extract Uppercase)",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>You are extracting uppercase letters from a string.</p>
+			<p><strong>Goal:</strong> Print only uppercase characters.</p>
+		`,
+		hint: "Use: char.isupper()",
+		starterCode: `"""
+EXPECTED OUTPUT:
+ABC
+"""
+
+text = "aAbBcC"
+
+# TODO: loop and print uppercase letters
+None`,
+		check: (code) => 
+			code.includes("isupper"),
+		keyconcepts: `
+			<li>Loop through strings character by character</li>
+			<li><code>.isupper()</code> checks uppercase</li>
+			<li>Combine loops with conditions</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xebth35"
+	},
+	{
+		title: "Raneg Loop (Repeat Action)",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>You are repeating a task multiple times.</p>
+			<p><strong>Goal:</strong> Use range() to loop 5 times.</p>
+		`,
+		hint: "Use: range(5)",
+		starterCode: `"""
+EXPECTED OUTPUT:
+0
+1
+2
+3
+4
+"""
+
+# TODO: print numbers 0-4 using range
+None`,
+		check: (code) => 
+			code.includes("range"),
+		keyconcepts: `
+			<li><code>range(n)</code> generates numbers from 0 to n-1</li>
+			<li>Useful for fixed loops</li>
+			<li>Common loop pattern</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xec2kz6"
+	},
+	{
+		title: "While Loop (Counting)",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>You are counting numbers until a condition is met.</p>
+			<p><strong>Goal:</strong> Print numbers from 0 to 4 using a while loop.</p>
+		`,
+		hint: "Increment counter",
+		starterCode: `"""
+EXPECTED OUTPUT:
+0
+1
+2
+3
+4
+"""
+
+i = 0
+
+# TODO: loop while i < 5
+None`,
+		check: (code) => 
+			code.includes("while") && code.includes("i < 5"),
+		keyconcepts: `
+			<li><code>while</code> loops run while condition is True</li>
+			<li>Must update variable inside loop</li>
+			<li>Be careful of infinite loops</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xec8wed"
+	},
+	{
+		title: "List Comprehension (Squares)",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>You are generating square numbers.</p>
+			<p><strong>Goal:</strong> Use list comprehension.</p>
+		`,
+		hint: "n**2 for n in range(...) ",
+		starterCode: `"""
+EXPECTED OUTPUT:
+[0,1, 4, 9, 16]
+"""
+
+# TODO: create squares list
+squares = None
+
+print(squares)`,
+		check: (code) => 
+			code.includes("for") && code.includes("**"),
+		keyconcepts: `
+			<li>List comprehensions create lists in one line</li>
+			<li>Format: [expression for item in iterable]</li>
+			<li>More concise than loops</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xek3tnc"
+	},
+	{
+		title: "List Comprehension + Filter (Short Words)",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Filter words based on length./p>
+			<p><strong>Goal:</strong> Keep words shorter than 5 letters.</p>
+		`,
+		hint: "Use if condition",
+		starterCode: `"""
+EXPECTED OUTPUT:
+['cat', 'dog']
+"""
+
+words = ["cat", "elephant", "dog", "giraffe"]
+
+# TODO: use list comprehension with condition
+short_words = None
+
+print(short_words)`,
+		check: (code) => 
+			code.includes("if"),
+		keyconcepts: `
+			<li>Add conditions in list comprehension</li>
+			<li>Format: [x for x in list if condition]</li>
+			<li>Similar to filtering data</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xen7k78"
+	},
+	{
+		title: "Transformation (Uppercase + Symbol)",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Enhance text formatting.</p>
+			<p><strong>Goal:</strong> Make words uppercase and add '!'</p>
+		`,
+		hint: "Use .upper()",
+		starterCode: `"""
+EXPECTED OUTPUT:
+['HI!', 'HELLO!']
+"""
+
+words = ["hi", "hello"]
+
+# TODO
+result = None
+
+print(result)`,
+		check: (code) => 
+			code.includes("upper"),
+		keyconcepts: `
+			<li>List comprehensions can transform data</li>
+			<li>Apply functions inside expression</li>
+			<li>Common for data cleaning</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xenfet8"
+	},
+	{
+		title: "Counting with Loops (Negatives)",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Count how many numbers are negative.</p>
+			<p><strong>Goal:</strong> Use loop or comprehension.</p>
+		`,
+		hint: "Use if num < 0",
+		starterCode: `"""
+EXPECTED OUTPUT:
+2
+"""
+
+nums = [5, -1, -2, -3]
+
+# TODO: count negatives
+count = None
+
+print(count)`,
+		check: (code) => 
+			code.includes("< 0"),
+		keyconcepts: `
+			<li>Combine loops with counting</li>
+			<li>Increment counter when condition met</li>
+			<li>Alternative: use sum() with booleans</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xennua8"
+	},
+	/** ADDITIONAL EXERCISES / NEXT LEVEL */
+	{
+		title: "Has Even Number",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Fix the function so it correctly checks whether a list contains an even number.</p>
+			<p><strong>Goal:</strong> Understand where <code>return False</code> should be placed when searching through a list.</p>
+		`,
+		hint: "Only return False after checking every number.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def has_even_number(nums):
+	"""Return True if any number is even."""
+	for num in nums:
+		if num % 2 == 0:
+			return True
+		else:
+			return False    # BUG
+			
+print(has_even_number([1, 3, 4, 5]))`,
+		check: (code) => 
+			code.includes("return True") && 
+			code.includes("return False"),
+		keyconcepts: `
+			<li>A loop should usually examine every item before deciding that something is not present</li>
+			<li>Returning too early can stop the loop before it reaches the correct answer</li>
+			<li>Debugging loops often involves tracing the order in which statements execute</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xep9suh"
+	},
+	{
+		title: "Has Negative Number",
+		difficultylevel: "🟡",
+		difficulty: "medium",
+		points: 20,
+		complete: false,
+		description: `
+			<p>Fix the logic so the function correctly finds negative numbers anywhere in the list.</p>
+			<p><strong>Goal:</strong> Understand loop execution and return placement.</p>
+		`,
+		hint: "The function should only return False after checking every value.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def has_negative(nums):
+	"""Return True if any number is negative."""
+	for num in nums:
+		if num < 0:
+			return True
+		else:
+			return False 		# BUG 
+
+print(has_negative([5, 2, -1, 3]))`,
+		check: (code) => 
+			code.includes("num < 0"),
+		keyconcepts: `
+			<li>Loops are often used to search through collections of data</li>
+			<li>The placement of <code>return</code> statements affects whether all items are checked</li>
+			<li>Testing with values later in the list helps reveal logic bugs</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xepmz6c"
+	},
+	{
+		title: "Less Than Threshold",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>Create a new list showing whether each item is less than a threshold.</p>
+			<p><strong>Goal:</strong> Build a list of boolean values using a loop.</p>
+		`,
+		hint: "Compare each item with thresh.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+[True, True, False]
+"""
+
+def elementwise_less_than(L, thresh):
+	result = []
+	
+	# TODO
+	for item in L:
+		if None:
+			result.append(True)
+		else:
+			result.append(False)
+			
+	return result
+	
+print(elementwise_less_than([1, 2, 5], 3))`,
+		check: (code) => 
+			code.includes("< thresh"),
+		keyconcepts: `
+			<li>Loops can process list items one at a time</li>
+			<li>Comparison operators produce boolean values such as True or False</li>
+			<li>The output list should contain one result for every input item</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xeq2tna"
+	},
+	{
+		title: "Even/Odd Mapping",
+		difficultylevel: "🟠",
+		difficulty: "medium-hard",
+		points: 25,
+		complete: false,
+		description: `
+			<p>Create a list showing which numbers are even.</p>
+			<p><strong>Goal:</strong> Convert numeric data into boolean results.</p>
+		`,
+		hint: "Use the modulus (%) operator.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+[False, True, False]
+"""
+
+def is_even_list(nums):
+	result = []
+	
+	# TODO: True if even, False otherwise 
+	for num in nums:
+		result.append(None)
+		
+	return result
+	
+print(is_even_list([1, 2, 3]))`,
+		check: (code) =>
+			code.includes("% 2"),
+		keyconcepts: `
+			<li>Each element can be evaluated independently inside a loop</li>
+			<li>The modulus operator helps determine whether a number is even</li>
+			<li>Building result lists is a common data transformation technique</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xeqfrxd"
+	},
+	{
+		title: "Repeated Numbers",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Detect whether the same number appears twice in a row.</p>
+			<p><strong>Goal:</strong> Compare neighboring elements using indexes.</p>
+		`,
+		hint: "Compare nums[i] with nums[i + 1].",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def has_consecutive_repeat(nums):
+	"""Return True if same number appears twice in a row"""
+	for i in range(len(nums) - 1):
+		if None:
+			return True
+			
+	return False
+	
+print(has_consecutive_repeat([1, 2, 2, 3]))`,
+		check: (code) => 
+			code.includes("i + 1"),
+		keyconcepts: `
+			<li><code>range(len(...))</code> provides index positions rather than values</li>
+			<li>Neighbor comparisons require access to both the current and next element</li>
+			<li>Careful boundary handling avoids accessing indexes beyond the end of the list</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xeqybrh"
+	},
+	{
+		title: "Duplicate Characters",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Check whether a word contains consecutive repeated letters.</p>
+			<p><strong>Goal:</strong> Apply index-based looping to strings.</p>
+		`,
+		hint: "Compare word[i] and word[i + 1].",
+		starterCode: `"""
+EXPECTED OUTPUT:
+True
+"""
+
+def has_double_letters(word):
+	"""Check if any letter repeats consecutively"""
+	for i in range(len(word) - 1):
+		if None:
+			return True
+			
+	return False
+	
+print(has_double_letters("letter"))`,
+		check: (code) => 
+			code.includes("word[i]") &&
+			code.includes("i + 1"),
+		keyconcepts: `
+			<li>Strings behave like sequences and can be indexed just like lists</li>
+			<li>Looking at neighboring characters helps identify patterns in text</li>
+			<li>Many searching algorithms rely on comparing adjacent elements</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xerckf7"
+	},
+	{
+		title: "Dice Simulation",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Simulate rolling a die many times and estimate the average profit.</p>
+			<p><strong>Goal:</strong> Practice simulation using loops and random values.</p>
+		`,
+		hint: "Store the result of each roll minus the cost.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+(float value ~ 0)
+"""
+
+import random
+
+def roll_dice():
+	return random.randint(1, 6)
+	
+def estimate_average_roll(n_runs):
+	"""Return average value minus cost (3)"""
+	results = []
+	
+	# TODO
+	for i in range(n_runs):
+		results.append(None)
+		
+	avg = sum(results) / n_runs
+	return avg
+	
+print(estimate_average_roll(1000))`,
+		check: (code) => 
+			code.includes("roll_dice"),
+		keyconcepts: `
+			<li>Simulations use repeated random trials to estimate outcomes</li>
+			<li>Accumulating results allows averages to be calculated afterward</li>
+			<li>Larger sample sizes generally produce more stable estimates</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xesks2b"
+	},
+	{
+		title: "Coin Flip Profit",
+		difficultylevel: "🔴",
+		difficulty: "hard",
+		points: 30,
+		complete: false,
+		description: `
+			<p>Estimate the average profit of a coin-flipping game.</p>
+			<p><strong>Goal:</strong> Model profits across many random trials.</p>
+		`,
+		hint: "Each play has a reward and a cost.",
+		starterCode: `"""
+EXPECTED OUTPUT:
+(float value)
+"""
+
+import random
+
+def flip_coin():
+	return random.choice([0, 2]) 		# win or nothing
+	
+def simulate_profit(n_runs):
+	"""Each play costs 1"""
+	profits = []
+	
+	# TODO
+	for i in range(n_runs):
+		profits.append(None)
+		
+	return sum(profits) / n_runs
+	
+print(simulate_profit(1000))`,
+		check: (code) => 
+			code.includes("flip_coin"),
+		keyconcepts: `
+			<li>Random simulations can be used to estimate long-term outcomes</li>
+			<li>Lists are useful for collecting results from repeated experiments</li>
+			<li>Expected value reasoning compares average rewards against costs</li>
+		`,
+		externallink: "https://onecompiler.com/python/44xetz7xp"
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
 	{
 		title: "",
 		difficultylevel: "",
@@ -1663,6 +3112,176 @@ print(None)`,
 		keyconcepts: ``,
 		externallink: ""
 	},
+	/** ADDITIONAL EXERCISES / NEXT LEVEL */
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
 	]
 },
 {
@@ -1670,6 +3289,20 @@ print(None)`,
 	title: "Working with External Libraries",
 	description: "Imports, operator overloading, and survival tips for venturing into the world of external libraries",
 	exercises: [
+	{
+		title: "",
+		difficultylevel: "",
+		difficulty: "",
+		points: 0,
+		complete: false,
+		description: ``,
+		hint: "",
+		starterCode: ``,
+		check: false,
+		keyconcepts: ``,
+		externallink: ""
+	},
+	/** ADDITIONAL EXERCISES / NEXT LEVEL */
 	{
 		title: "",
 		difficultylevel: "",
