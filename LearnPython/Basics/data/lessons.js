@@ -1377,7 +1377,7 @@ def balance_status(amount):
 	
 print(balance_status(100))`,
 		check: (code) =>
-			code.includes(ïf"),
+			code.includes("if"),
 		keyconcepts: `
 			<li>Conditional branching</li>
 			<li>Number comparison</li>
