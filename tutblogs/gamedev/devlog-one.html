@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The First Pixel / Game Developer Blog</title>
+		<link rel="stylesheet" href="../tutblogs-styles.css" />
+	<body>
+		<nav>
+			<a href="../index.html" class="breadcrumb">&larr; Back to Tutorial Blogs</a>
+		</nav>
+		
+		<article class="blog-content">
+			<h1>Devlog #1 - The First Pixel</h1>
+			<p><em>Published on: 2026-08-14 | Tags: #gamedev #canvas</em></p>
+			
+			<section>
+				<h2>Chronicles of JS13KGames 2026 game jam</h2>
+				<p>Development of <em>Chromatic Balance: Rainbow Resonance</em> has officially begun.</p>
+				<p>I started by creating an HTML5 Canvas and accessing its 2D rendering context through JavaScript. My first objective was deliberately simple: draw a single red square.</p>
+				<p>I learned that the Canvas coordinate system begins at <code>(0, 0)</code> in the top-left corner and that <code>fillRect()</code> uses the coordinates of an object's top-left corner rathr than its center.</p>
+				<p>This may seem like a tiny first step, but this square represents the foundation of the entire game.  Eventually, the Canvas will contain the colour board, musical interface, unicorn, animations and visual feedback.</p>
+				<p><strong>First milestone: complete.</strong><br />One Canvas. One square. One game beginning.</p>
+			</section>
+			
+			<section class="tutorial-box">
+				<h3>TASK 1: Create the Canvas</h3>
+				<div style="background-color: #333; padding: 0 0 10px 10px;">
+					<p>1. Create <code>index.html</code> containing:</p>
+					<ul>
+						<li>the normal HTML document structure</li>
+						<li>a <code>&lt;title&gt;</code></li>
+						<li>a <code>&lt;canvas&gt;</code></li>
+						<li>the canvas should have an <code>id</code> of <code>gameCanvas</code></li>
+						<li>make it <strong>800 &times; 600</strong></li>
+					</ul>
+				</div>
+				<div style="background-color: #444; padding: 0 0 10px 10px;">
+					<p>2. Create <code>style.css</code> and add the following:</p>
+					<pre class="tut-pre">body &#123;
+	margin: 0;
+	background: #111;
+&#125;
+
+canvas &#123;
+	border: 1px solid #999;
+&#125;</pre>
+				</div>
+				<div style="background-color: #333; padding: 0 0 10px 10px;">
+					<p>3. Create <code>game.js</code>, and figure out how to:</p>
+					<ul>
+						<li>Retrieve <code>gameCanvas</code>.</li>
+						<li>Retrieve its <strong>2D context</strong>.</li>
+						<li>Set a fill color.</li>
+						<li>Draw a rectangle.</li>
+					</ul>
+				</div>
+				<p><a href="task1_createcanvas.html">Review Task 1</a> once completed.</p>
+			</section>
+		</article>
+		
+		<footer>
+			<div>
+				&copy; Created and Designed by <a href="https://www.linkedin.com/in/ronica-singh-7707aa38"><span style="color:#58A6FF">Ronica Singh</span></a>
+				<br />for <span style="color:#69B7FF">Learn WebAnim</span>
+			</div>
+		</footer>
+		
+	</body>
+</html>

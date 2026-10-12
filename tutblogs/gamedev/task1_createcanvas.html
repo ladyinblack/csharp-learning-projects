@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tutorial Blog / Game Developer Blog</title>
+		<link rel="stylesheet" href="../tutblogs-styles.css" />
+	<body>
+		<nav>
+			<a href="../index.html" class="breadcrumb">&larr; Back to Tutorial Blogs</a>
+		</nav>
+		
+		<article class="blog-content">
+			<h1>TASK 1 - Create a Canvas</h1>
+			<p><em>Published on: 2026-08-14 | Tags: #gamedev #canvas</em></p>
+			
+			<section id="gameScene">
+				<p class="codepen" data-height="300" data-pen-title="The First Pixel Demo" data-version="2" data-default-tab="result" data-slug-hash="pveodBB" data-user="ladyinblack" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+				  <span>See the Pen <a href="https://codepen.io/editor/ladyinblack/pen/01a03398-3bd2-7f2e-8117-f3486300026e">
+				  The First Pixel Demo</a> by Ronica Singh (<a href="https://codepen.io/ladyinblack">@ladyinblack</a>)
+				  on <a href="https://codepen.io">CodePen</a>.</span>
+				</p>
+				<script async src="https://public.codepenassets.com/embed/index.js"></script>
+			</section>
+			
+			<section>
+				<h2>Finding the Canvas</h2>
+				<pre class="tut-pre">const canvas = document.getElementById("gameCanvas");</pre>
+				<p>This line can be described as "Find the HTML element whose ID is <code>gameCanvas</code>, and store a reference to it in the variable <code>canvas</code>.</p>
+				<h2>Getting the drawing context</h2>
+				<pre class="tut-pre">const ctx = canvas.getContext("2d");</pre>
+				<p><code>canvas</code> is the <strong>drawing surface</strong>.</p>
+				<p><code>ctx</code> is effectively our <strong>2D drawing toolbox</strong>.</p>
+				<p>And <code>ctx</code> is a very common convention for "context", so you're like to see this everywhere in Canvas code.</p>
+				<h2>Choosing the colour</h2>
+				<pre class="tut-pre">ctx.fillStyle = "red";</pre>
+				<p>This doesn't actually draw anything, but tells us "The next filled shapes I draw should use red."</p>
+				<h2>Drawing the rectangle</h2>
+				<pre class="tut-pre">ctx.fillRect(
+    canvas.width / 2 - 100,
+    canvas.height / 2 - 100,
+    100,
+    100
+);</pre>
+				<p>You may have noticed something wrong with this code.  It was done deliberately.  Can you identify what is wrong with this code?</p>
+				
+				<h2>A sidenote on "centering" on the Canvas</h2>
+				<p>A subtle mathematical issue in the above positioning:</p>
+				<pre class="tut-pre">canvas.width / 2 - 100
+canvas.height / 2 - 100</pre>
+				<p>With our current 800 &times; 600 Canvas, that becomes:</p>
+				<pre class="tut-pre">x = 800 / 2 - 100
+  = 300
+
+y = 600 / 2 - 100
+  = 200</pre>
+				<p>Therefore, we're actually drawing:</p>
+				<pre class="tut-pre">          Canvas centre
+               ↓
+               x
+               │
+        ┌──────┐
+        │      │
+        │      │
+        └──────┘</pre>
+				<p>The <strong>top-left corner</strong> of our square is at <code>(300, 200)</code>.</p>
+				<p>Because the square is 100 &times; 100, its center is actually:</p>
+				<pre class="tut-pre">x = 300 + 50 = 350
+y = 200 + 50 = 250</pre>
+				<p>The Canvas center is:</p>
+				<pre class="tut-pre">(400, 300)</pre>
+				<p>So the square is 50 pixels too far up and left.</p>
+				<h3>To properly center the square:</h3>
+				<p>You want to subtract <strong>half the square's dimensions</strong>, not the entire dimensions.</p>
+				<pre class="tut-pre">canvas.width / 2 - 50
+canvas.height / 2 - 50</pre>
+				<p>Further on in this tutorial series we'll eventually write this in terms of a varaible representing the square's size.</p>
+				<div style="background-color: #333; padding: 0 0 10px 10px;">
+					<h3>TASK 1 OBJECTIVES COMPLETE</h3>
+					<p>You've successfully:</p>
+					<ul>
+						<li>created a Canvas</li>
+						<li>accessed it through JavaScript</li>
+						<li>obtained the 2D rendering context</li>
+						<li>selected a fill color</li>
+						<li>drawn your first Canvas object</li>
+						<li>used the Canvas dimensions to calculate a position</li>
+					</ul>
+				</div>
+				
+				<h2>Up for another challenge?</h2>
+				<p>In this task you will learn how the Canvas coordinates system actually work.</p>
+				<p>We're going to make several rectangles appear at different positions and sizes.</p>
+				<p>You'll learn:</p>
+				<ul>
+					<li><code>x</code> and <code>y</code></li>
+					<li>width and height</li>
+					<li>the Canvas coordinate system</li>
+					<li>how objects relate spatially</li>
+					<li>why we'll eventually need variables rather than scattering numbers throughout our game</li>
+				</ul>
+				
+				<h2>TASK 1.1 - Exploring the Canvas Coordinate System</h2>
+				<p>Your challenge:</p>
+				<p><strong>Draw four 100 &times 100 squares, one near each corner of the Canvas, with a different colour for each square.</strong></p>
+				<h4>Your constraints</h4>
+				<p>For this exercise:</p>
+				<ul>
+					<li>Keep the Canvas at <strong>800 &times; 600</strong>.</li>
+					<li>Keep every square <strong>100 &times; 100</strong>.</li>
+					<li>Use four different colours.</li>
+					<li><strong>Don't use loops yet.</strong></li>
+					<li>Don't create functions yet.</li>
+					<li>Just manually draw the four squares.</li>
+				</ul>
+				
+				<p><em>Why no loops?</em></p>
+				<p>Because right now, you should get comfortable thinking in <strong>Canvas coordinates</strong> before you get introduced to abstractions.</p>
+			</section>
+			
+		</article>
+		
+		<footer>
+			<div>
+				&copy; Created and Designed by <a href="https://www.linkedin.com/in/ronica-singh-7707aa38"><span style="color:#58A6FF">Ronica Singh</span></a>
+				<br />for <span style="color:#69B7FF">Learn WebAnim</span>
+			</div>
+		</footer>
+		
+	</body>
+</html>
