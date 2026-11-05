@@ -53,8 +53,12 @@ header p {
 	transition: 0.5s;
 }
 
-.nav-link:hover {
+.nav-link:not(.active):hover {
 	background: var(--accent-color);
+}
+
+.nav-link.active {
+	color: var(--accent-color);
 }
 
 /* --- Filter Tag selections --- */

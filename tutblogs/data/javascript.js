@@ -297,6 +297,60 @@ console.log(stack);    // [10, 20]
 	],
 	queues: [
 	{
+		question: `What is the core structural access rule of a Queue data structure?`,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
+		question: ``,
+		options: [],
+		answer: ``,
+		explanation: []
+	},
+	{
 		question: ``,
 		options: [],
 		answer: ``,

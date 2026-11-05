@@ -74,23 +74,33 @@ button {
 	color: white;
 }
 
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
 .btn-push {
 	background-color: var(--primary);
 }
-.btn-push:hover {
+.btn-push:hover:not(:disabled) {
 	background-color: #126600;
 }
 .btn-pop {
 	background-color: var(--secondary);
 }
-.btn-pop:hover {
+.btn-pop:hover:not(:disabled) {
 	background-color: #4e185b;
 }
 .btn-peek {
 	background-color: #475569;
 }
-.btn-peek:hover {
+.btn-peek:hover:not(:disabled) {
 	background-color: #334155;
+}
+.btn-animate {
+	background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+.btn-animate:hover:not(:disabled) {
+	background: linear-gradient(135deg, #D097706, #B45309);
 }
 
 .status-box {

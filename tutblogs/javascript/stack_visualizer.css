@@ -61,11 +61,16 @@ button {
 	transition: all 0.2s;
 }
 
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
 .btn-push {
 	background-color: var(--primary);
 	color: white;
 }
-.btn-push:hover {
+.btn-push:hover:not(:disabled) {
 	background-color: #4338ca;
 }
 
@@ -73,8 +78,24 @@ button {
 	background-color: var(--secondary);
 	color: white;
 }
-.btn-pop:hover {
+.btn-pop:hover:not(:disabled) {
 	background-color: #be185d;
+}
+
+.btn-peek {
+	background-color: #475569;
+	color: white;
+}
+.btn-peek:hover:not(:disabled) {
+	background-color: #334155;
+}
+
+.btn-animate {
+	background: linear-gradient(135deg, #F59E0B, #D97706);
+	color: white;
+}
+.btn-animate:hover:not(:disabled) {
+	background: linear-gradient(135deg, #D97706, #B45309);
 }
 
 .status-box {
@@ -122,6 +143,12 @@ button {
 
 .stack-element.popping {
 	animation: slideUpOut 0.3s ease-in forwards;
+}
+
+.stack-element.peeking {
+	background: linear-gradient(135deg, #10B981, #059669);
+	transform: scale(1.05);
+	transition: 0.2s;
 }
 
 @keyframes slideDown {

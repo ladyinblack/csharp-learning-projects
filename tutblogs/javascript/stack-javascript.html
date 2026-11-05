@@ -14,7 +14,7 @@
 		
 		<article class="blog-content">
 			<h1>Stack (JavaScript) - Collection Deep Dive</h1>
-			<p><em>Published on: 2026-06-12 | Tags: #JS #Stack</em></p>
+			<p><em>Published on: 2026-06-12 | Tags: #JS #Stack #DataStructures</em></p>
 			
 			<section>
 				<h2>The Real-World "Why"</h2>
@@ -57,9 +57,11 @@
 					<div class="controls">
 						<div class="input-group">
 							<input type="text" id="element-input" placeholder="Enter value (e.g., A, B, 42)" maxLength="10" />
-							<button class="btn-push" onclick="pushToStack()">Push</button>
+							<button class="btn-push" id="btn-push" onclick="pushToStack()">Push</button>
 						</div>
-						<button class="btn-pop" onclick="popFromStack()">Pop</button>
+						<button class="btn-pop" id="btn-pop" onclick="popFromStack()">Pop</button>
+						<button class="btn-peek" id="btn-peek" onclick="peekStack()">Peek</button>
+						<button class="btn-animate" id="btn-animate" onclick="runAutoAnimation()">▶️ Run Animation</button>
 						<div class="status-box" id="status-log">Status: Stack is empty. Ready for operations</div>
 					</div>
 					<div class="canvas" id="stack-canvas"></div>		

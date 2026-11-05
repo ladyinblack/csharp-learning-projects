@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript DSA / Game Developer Blog</title>
+		<link rel="stylesheet" href="../tutblogs-styles.css" />
+		<link rel="stylesheet" href="queue_visualizer.css" />
+	<body>
+		<nav>
+			<a href="../index.html" class="breadcrumb">&larr; Back to Tutorial Blogs</a>
+		</nav>
+		
+		<article class="blog-content">
+			<h1>Queue (JavaScript) - Collection Deep Dive</h1>
+			<p><em>Published on: 2026-10-12 | Tags: #JS #Queue #DataStructures</em></p>
+			
+			<section>
+				<h2>The Real-World "Why"</h2>
+				</p>In software engineering, queues are essential when processing items in the exact sequence they arrive.</p>
+				<ul>
+					<li><strong>Web Traffic Load Balancers:</strong> Nginx or AWS Elastic Load Balancers queue incoming user requests before forwarding them to available microservice instances.</li>
+					<li><strong>Message Queues (RabbitMQ / Kafka):</strong> Backend systems use queues to decouple heavy background processing (like generating PDF invoices or sending emails) from the main API response thread.</li>
+					<li><strong>Breadth-First Search (BFS):</strong> Graph traversal algorithms rely on a queue to visit neighbor nodes level-by-level.</li>
+				</ul>
+				<h3>Computational Tradeoffs in JavaScript:</h3>
+				<ul>
+					<li><strong>Enqueue (<code>push()</code>):</strong> <em>O(1)</em> constant time.</li>
+					<li><strong>Dequeue (<code>shift()</code>):</strong> <em>O(n)</em> linear time in standard JavaScript arrays, because removing the first element forces all remaining items to re-index. <em>Note: High-performance production queues use a linked list structure to achieve O(1) dequeues).</em></li>
+					<li><strong>Peek:</strong> <em>O(1)</em> constant time.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Hands-On Project Tutorial - The Print Spooler Manager</h2>
+				<p>Let's build a practical JavScript class that simulates a print shop job manager.  Type this out in your editor to build your tactile coding habits.</p>
+				
+				<div class="console-container">
+					<div class="console-header">
+						<div class="dot red"></div>
+						<div class="dot yellow"></div>
+						<div class="dot green"></div>
+						<span style="font-size: 0.8rem; margin-left: 10px; color: var(--text-dim);">Live Terminal Execution</span>
+					</div>
+					<iframe src="https://onecompiler.com/javascript/455xzjrkw" frameborder="0"></iframe>
+				</div>
+			</section>
+			
+			<section>
+				<h2>Queue Visualizer</h2>
+				<p>FIFO: First-In, First-Out Demonstration (Front is on the left, Back is on the right)</p>
+				
+				<div class="vis-container">
+					<div class="controls">
+						<div class="input-group">
+							<input type="text" id="element-input" placeholder="Enter task (e.g., Job1)" maxLength="8" />
+							<button class="btn-enqueue" id="btn-enqueue" onclick="enqueueItem()">Enqueue</button>
+						</div>
+						<button class="btn-dequeue" id="btn-dequeue" onclick="dequeueItem()">Dequeue</button>
+						<button class="btn-peek" id="btn-peek" onclick="peekQueue()">Peek Front</button>
+						<button class="btn-animate" id="btn-animate" onclick="runAutoAnimation()">▶️ Run Animation</button>
+						<div class="status-box" id="status-log">Status: Queue is empty. Ready for operations</div>
+					</div>
+					<div class="canvas" id="queue-canvas"></div>
+				</div>
+			</section>
+			
+			<section class="tutorial-box">
+				<h3>Test Your Knowledge</h3>
+				<ol>
+					<li><p>Review your knowledge on the Queue Collection, enter the <a href="../quiz.html?quiz=javascript&topic=queues">Quiz zone</a>.</p></li>
+					<li><p>Practice makes Perfect! Try out some of these <a href="queues_exercises.html">Scenario-based Exercises</a> on your own.</p></li>
+				</ol>
+			</section>
+		</article>
+		
+		<footer>
+			<div>
+				&copy; Created and Designed by <a href="https://www.linkedin.com/in/ronica-singh-7707aa38"><span style="color:#58A6FF">Ronica Singh</span></a>
+				<br />for <span style="color:#69B7FF">Learn WebAnim</span>
+			</div>
+		</footer>
+		
+		<script src="queuevis.js"></script>
+	</body>
+</html>

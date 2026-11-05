@@ -1,0 +1,175 @@
+:root {	
+	--primary: #0284C7;		/* Sky blue for queues */
+	--secondary: #0369A1;
+	--background: #f8fafc;
+	--viz-bg: #ffffff;
+	--text: #1e293b;
+}
+
+h2 {
+	margin-bottom: 0.5rem;
+	/*color: var(--primary);*/
+}
+p {
+	margin-bottom: 2rem;
+	/*color: #64748b;*/
+}
+
+.vis-container {
+	display: flex;
+	gap: 3rem;
+	background: var(--viz-bg);
+	padding: 2rem;
+	border-radius: 16px;
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+	max-width: 800px;
+	width: 100%;
+}
+
+.controls {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	justify-content: center;
+}
+
+.input-group {
+	display: flex;
+	gap: 0.5rem;
+}
+
+input {
+	padding: 0.75rem;
+	border-radius: 8px;
+	border: 2px solid #CBD5E1;
+	font-size: 1rem;
+	flex: 1;
+	outline: none;
+}
+input:focus {
+	border-color: var(--primary);
+}
+
+button {
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: white;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.btn-enqueue {
+	background-color: var(--primary);
+}
+.btn-enqueue:hover:not(:disabled) {
+	background-color: #0369A1;
+}
+
+.btn-dequeue {
+	background-color: #E11D48;
+}
+.btn-dequeue:hover:not(:disabled) {
+	background-color: #BE123C;
+}
+
+.btn-peek {
+	background-color: #475569;
+}
+.btn-peek:hover:not(:disabled) {
+	background-color: #334155;
+}
+
+.btn-animate {
+	background: linear-gradient(135deg, #F59E0B, #D97706);
+	color: white;
+}
+.btn-animate:hover:not(:disabled) {
+	background: linear-gradient(135deg, #D97706, #B45309);
+}
+
+.status-box {
+	background: #f1f5f9;
+	padding: 1rem;
+	border-radius: 8px;
+	font-family: monospace;
+	min-height: 50px;
+	color: var(--text);
+	font-size: 0.85rem;
+}
+
+/* The Visual Queue Container (Horizontal Flow: Front to Back) */
+.canvas {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	border-left :4px solid #475569;
+	border-bottom: 4px solid #475569;
+	border-radius: 12px;
+	height: 150px;
+	width: 100px;
+	position: relative;
+	background: #fafafa;
+	padding: 10px;
+	gap: 10px;
+	overflow-x: auto;
+}
+
+/* Queue Element Animation */
+.queue-element {
+	min-width: 60px;
+	height: 60px;
+	background: linear-gradient(135deg, #38BDF8, #0284C7);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	animation: slideInRight 0.3s ease-out forwards;
+	flex-shrink: 0;
+}
+
+.queue-element.dequeuing {
+	animation: slideOutLeft 0.3s ease-in forwards;
+}
+
+.queue-element.peeking {
+	background: linear-gradient(135deg, #10B981, #059669);
+	transform: scale(1.1);
+	transition: 0.2s;
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideOutLeft {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+}

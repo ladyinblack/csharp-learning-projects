@@ -57,10 +57,11 @@
 					<div class="controls">
 						<div class="input-group">
 							<input type="text" id="element-input" placeholder='e.g., "State1"' maxlength="12" />
-							<button class="btn-push" onclick="pushToStack()">Push()</button>
+							<button class="btn-push" id="btn-push" onclick="pushToStack()">Push()</button>
 						</div>
-						<button class="btn-pop" onclick="popFromStack()">Pop()</button>
-						<button class="btn-peek" onclick="peekStack()">Peek()</button>
+						<button class="btn-pop" id="btn-pop" onclick="popFromStack()">Pop()</button>
+						<button class="btn-peek" id="btn-peek" onclick="peekStack()">Peek()</button>
+						<button class="btn-animate" id="btn-animate" onclick="runAutoAnimation()">▶️ Run Animation</button>
 						<div class="status-box" id="status-log">// Output Console<br />Stack&lt;string&gt; libraryStack = new Stack&lt;string&gt;();</div>
 					</div>
 					<div class="canvas" id="stack-canvas"></div>
